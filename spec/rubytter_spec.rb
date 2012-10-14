@@ -6,6 +6,12 @@ describe Trustme::Rubytter do
     Trustme::Rubytter.new
   end
 
+  it 'display screen_name' do
+    screen_name = subject.verify_credentials.screen_name
+    screen_name.should_not be_empty
+    puts "    screen_name is " + screen_name
+  end
+
   it "followers" do
     subject.followers('basyura').should_not be_empty
   end
