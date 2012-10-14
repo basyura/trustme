@@ -17,8 +17,8 @@ module Trustme
       )
       @client = ::OAuthRubytter.new(access_token)
     end
-    def followers(user)
-      @client.followers(user)
+    def method_missing(method , *args)
+      @client.__send__(method, *args)
     end
   end
 end

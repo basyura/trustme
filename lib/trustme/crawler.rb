@@ -15,17 +15,20 @@ module Trustme
     def crawl(screen_name, number, list)
       followers = @client.followers(screen_name)
       followers.each do |user|
-        if user.followers_count > 10000 && user.friends_count > 10000
+        if target?(user)
           list << user
-          puts "    #{user.screen_name} #{user.followers_count} #{user.friends_count}"
         end
         number += 1
-        return if number > CRAWL_MAX
+        break if number > CRAWL_MAX
       end
       if number <= CRAWL_MAX
         crawl(followers[0].screen_name, number, list)
       end
       list
+    end
+
+    def target?(user)
+      user.followers_count > 10000 && user.friends_count > 10000 && !user.following
     end
   end
 end
