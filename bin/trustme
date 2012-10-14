@@ -2,5 +2,4 @@
 
 require 'trustme'
 
-puts "hi"
-
+Crawler.new.start('basyura')
