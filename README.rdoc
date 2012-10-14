@@ -1,0 +1,27 @@
+= trustme
+
+* {Homepage}[https://rubygems.org/gems/trustme]
+* {Documentation}[http://rubydoc.info/gems/trustme/frames]
+* {Email}[mailto:basyura at gmail.com]
+
+== Description
+
+TODO: Description
+
+== Features
+
+== Examples
+
+  require 'trustme'
+
+== Requirements
+
+== Install
+
+  $ gem install trustme
+
+== Copyright
+
+Copyright (c) 2012 basyura
+
+See LICENSE.txt for details.
