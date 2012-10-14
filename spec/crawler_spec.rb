@@ -6,7 +6,12 @@ describe Trustme::Crawler do
     subject.should_not be_nil
   end
 
-  it 'crawl someuer' do
-    subject.start('basyura').should_not be_nil
+  it 'crawl over 10000 users' do
+    list = subject.start('basyura')
+    list.should_not be_empty
+    list.each do |user|
+      user.followers_count.should >= 10000
+      user.friends_count.should >= 10000
+    end
   end
 end
