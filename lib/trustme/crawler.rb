@@ -15,11 +15,9 @@ module Trustme
     def crawl(screen_name, number, list)
       followers = @client.followers(screen_name)
       followers.each do |user|
-        if target?(user)
-          list << user
-        end
-        number += 1
+        list << user if target?(user)
         break if number > CRAWL_MAX
+        number += 1
       end
       if number <= CRAWL_MAX
         crawl(followers[0].screen_name, number, list)
