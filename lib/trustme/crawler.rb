@@ -13,7 +13,7 @@ module Trustme
 
     private
     def crawl(screen_name, number)
-      follwers = @client.follwers(screen_name)
+      follwers = @client.followers(screen_name)
       follwers.each do user
         puts user.screen_name
         number += 1
