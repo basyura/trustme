@@ -19,6 +19,7 @@ describe Trustme::Rubytter do
   it "exists friend ship" do
     screen_name = subject.verify_credentials.screen_name
     user = subject.friends(screen_name)[0]
+    user = subject.user(user.screen_name)
     user.following.should be_true
   end
 end
