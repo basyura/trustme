@@ -11,7 +11,11 @@ describe Trustme::Client do
     #subject.crawl
   #end
 
-  it "random tweet" do
-    subject.tweet
+  #it "random tweet" do
+    #subject.tweet
+  #end
+  #
+  it "follow who follow me" do
+    subject.follow_followers
   end
 end
