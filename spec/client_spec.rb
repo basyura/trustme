@@ -15,7 +15,11 @@ describe Trustme::Client do
     #subject.tweet
   #end
   #
-  it "follow who follow me" do
-    subject.follow_followers
+  #it "follow who follow me" do
+    #subject.follow_followers
+  #end
+  
+  it "stat" do
+    puts subject.stat
   end
 end

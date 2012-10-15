@@ -30,6 +30,12 @@ module Trustme
       end
     end
     #
+    def stat
+      open(File.expand_path("~/trustme_stat"), 'a') do |f| 
+        f.puts Time.now.to_s + "\t" + @client.verify_credentials.to_s
+      end
+    end
+    #
     private
     def follow(screen_name)
       @client.follow(screen_name)
