@@ -2,12 +2,16 @@ require 'spec_helper'
 require 'trustme'
 
 describe Trustme::Client do
-  it "follow user" do
-    client = Trustme::Rubytter.new
-    screen_name = client.verify_credentials.screen_name
+  #it "follow user" do
+    #ret = subject.__send__(:follow, 'basyura')
+    #ret.following.should be_true
+  #end
 
-    subject.follow('basyura').each do |screen_name|
-      client.user(user.screen_name).following.should be_true
-    end
+  #it "crawl user" do
+    #subject.crawl
+  #end
+
+  it "random tweet" do
+    subject.tweet
   end
 end
