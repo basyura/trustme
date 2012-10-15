@@ -2,4 +2,4 @@
 
 require 'trustme'
 
-Trustme::Client.new.crawl.tweet
+Trustme::Client.new.tweet
