@@ -2,4 +2,4 @@
 
 require 'trustme'
 
-Trustme::Crawler.new.start('basyura')
+Trustme::Client.new.crawl

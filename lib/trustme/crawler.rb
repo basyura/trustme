@@ -1,6 +1,6 @@
 
 module Trustme
-  CRAWL_MAX = 10
+  CRAWL_MAX = 5
   class Crawler
     #
     def initialize
